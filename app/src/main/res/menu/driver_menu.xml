@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/addTrip"
+        android:orderInCategory="1"
+        android:title="@string/addTrip" />
+
+    <item android:id="@+id/viewDriverProfile"
+        android:orderInCategory="2"
+        android:title="@string/driverProfile" />
+
+
+    <item android:id="@+id/signOut"
+        android:orderInCategory="3"
+        android:title="@string/signOut" />
+
+
+</menu>

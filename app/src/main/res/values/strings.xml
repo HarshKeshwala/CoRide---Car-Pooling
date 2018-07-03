@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CoRide</string>
+    <string name="app_name">Carpool</string>
     <string name="driver">Driver</string>
     <string name="rider">Rider</string>
     <string name="driverEmail">Driver Email</string>
@@ -18,4 +18,18 @@
     <string name="confirmPassword">Confirm Password</string>
     <string name="licenseNumber">License Number</string>
     <string name="dob">Date Of Birth</string>
+
+    <string name="upcomingTrips">Upcoming Trips</string>
+    <string name="pastTrips">Past Trips</string>
+    <string name="addTrip">Add Trip</string>
+    <string name="signOut">Sign Out</string>
+    <string name="driverProfile">Account</string>
+    <string name="trips">Trips</string>
+    <string name="createTrip">Create Trip</string>
+    <string name="source">Source</string>
+    <string name="destination">Destination</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="expense">Expense</string>
+
 </resources>

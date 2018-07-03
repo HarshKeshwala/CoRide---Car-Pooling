@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".DriverLoginActivity"
             android:label="@string/driver"
@@ -29,16 +28,16 @@
             android:name=".RiderLoginActivity"
             android:label="@string/rider"
             android:parentActivityName=".MainActivity" />
-
-        <activity android:name=".DriverSignUpActivity"
+        <activity
+            android:name=".DriverSignUpActivity"
             android:label="@string/driverSignUp"
-            android:parentActivityName=".DriverLoginActivity"
-            />
-
-        <activity android:name=".RiderSignUpActivity"
+            android:parentActivityName=".DriverLoginActivity" />
+        <activity
+            android:name=".RiderSignUpActivity"
             android:label="@string/riderSignUp"
-            android:parentActivityName=".RiderLoginActivity"
-            />
+            android:parentActivityName=".RiderLoginActivity" />
+        <activity android:name=".DriverHomeActivity" />
+        <activity android:name=".DriverCreateTrip"></activity>
     </application>
 
 </manifest>

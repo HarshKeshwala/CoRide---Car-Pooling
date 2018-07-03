@@ -194,7 +194,7 @@ public class DriverLoginActivity extends AppCompatActivity {
 
             if(status.equals("Ok") == true) {
                 Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),DriverHomeActivity.class));
             }
             else    {
                 Toast.makeText(getApplicationContext(),"Incorrect username or password",Toast.LENGTH_LONG).show();
