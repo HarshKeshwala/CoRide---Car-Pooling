@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical|center_horizontal"
+    tools:context=".DriverLoginActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:weightSum="10"
+            android:gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:weightSum="10"
+            android:gravity="center_horizontal"
+            >
+
+            <EditText
+                android:id="@+id/driverEmailIdLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
+                android:background="@drawable/edit_text_design"
+                android:padding="10dp"
+                android:layout_weight="10"
+                android:hint="@string/driverEmail"
+                android:maxLength="50"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:weightSum="10"
+            android:gravity="center_horizontal"
+            >
+
+            <EditText
+                android:id="@+id/driverPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
+                android:background="@drawable/edit_text_design"
+                android:padding="10dp"
+                android:layout_weight="10"
+                android:hint="@string/password"
+                android:maxLength="50"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:weightSum="10"
+            android:gravity="center_horizontal"
+            >
+
+            <Button
+                android:id="@+id/driverLoginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_design"
+                android:textColor="@color/colorText"
+                android:text="@string/login"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:elevation="10dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:weightSum="10"
+            >
+            <TextView
+                android:id="@+id/driverSignUpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/colorText"
+                android:text="@string/signUpText"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
