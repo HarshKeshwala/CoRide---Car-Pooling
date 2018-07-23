@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    tools:context=".RiderAccountProfileActivity"
     android:background="@color/colorPrimary"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    tools:context=".DriverCreateTrip">
+    android:layout_gravity="center_vertical|center_horizontal"
+    >
 
     <TableLayout
         android:layout_width="match_parent"
@@ -18,6 +16,7 @@
         android:layout_gravity="center_vertical|center_horizontal"
         android:padding="10dp">
 
+        <!--First Name-->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,13 +27,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorText"
-                android:text="@string/source"
+                android:text="@string/firstName"
                 android:gravity="left"
                 android:paddingLeft="14dp"
                 android:textSize="16dp"
                 />
         </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +41,7 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripSource"
+                android:id="@+id/riderFirstNameProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -52,13 +50,12 @@
                 android:background="@drawable/edit_text_design"
                 android:padding="10dp"
                 android:layout_weight="10"
-                android:hint="@string/source"
+                android:hint="@string/firstName"
                 android:maxLength="50"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
                 />
         </TableRow>
 
+        <!--Last Name-->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,12 +66,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorText"
-                android:text="@string/destination"
+                android:text="@string/lastName"
                 android:gravity="left"
                 android:paddingLeft="14dp"
                 android:textSize="16dp"
                 />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,7 +81,7 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripDestination"
+                android:id="@+id/riderLastNameProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -92,13 +90,12 @@
                 android:background="@drawable/edit_text_design"
                 android:padding="10dp"
                 android:layout_weight="10"
-                android:hint="@string/destination"
+                android:hint="@string/lastName"
                 android:maxLength="50"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
                 />
         </TableRow>
 
+        <!--Email Address-->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorText"
-                android:text="@string/date"
+                android:text="@string/email"
                 android:gravity="left"
                 android:paddingLeft="14dp"
                 android:textSize="16dp"
@@ -123,22 +120,21 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripDate"
+                android:id="@+id/riderEmailProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="16sp"
                 android:background="@drawable/edit_text_design"
                 android:padding="10dp"
                 android:layout_weight="10"
-                android:hint="@string/date"
+                android:hint="@string/email"
                 android:maxLength="50"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
                 />
         </TableRow>
 
+        <!--Phone Number-->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -149,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorText"
-                android:text="@string/time"
+                android:text="@string/phone"
                 android:gravity="left"
                 android:paddingLeft="14dp"
                 android:textSize="16dp"
@@ -163,23 +159,21 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripTime"
+                android:id="@+id/riderPhoneProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="time"
+                android:inputType="phone"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="16sp"
                 android:background="@drawable/edit_text_design"
                 android:padding="10dp"
                 android:layout_weight="10"
-                android:hint="@string/time"
+                android:hint="@string/phone"
                 android:maxLength="50"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
                 />
         </TableRow>
 
-
+        <!--Dob-->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -190,7 +184,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorText"
-                android:text="@string/expense"
+                android:text="@string/dob"
                 android:gravity="left"
                 android:paddingLeft="14dp"
                 android:textSize="16dp"
@@ -204,53 +198,18 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripExpense"
+                android:id="@+id/riderDobProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:inputType="date"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="16sp"
                 android:background="@drawable/edit_text_design"
                 android:padding="10dp"
                 android:layout_weight="10"
-                android:hint="@string/expense"
-                android:maxLength="6"
-                android:nextFocusUp="@id/tripExpense"
-                android:nextFocusLeft="@id/tripExpense"
+                android:hint="@string/dob"
+                android:maxLength="50"
                 />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="10"
-            android:gravity="left"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorText"
-                android:text="@string/vehicle"
-                android:gravity="left"
-                android:paddingLeft="14dp"
-                android:textSize="16dp"
-                />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:weightSum="10"
-            android:gravity="center_horizontal"
-            >
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="10"
-                android:id="@+id/vehicleId"
-                android:background="@drawable/edit_text_design"
-                >
-            </Spinner>
         </TableRow>
 
         <TableRow
@@ -261,15 +220,29 @@
             android:gravity="center_horizontal"
             >
             <Button
-                android:id="@+id/tripCreateButton"
+                android:id="@+id/riderProfileUpdateCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_design"
                 android:textColor="@color/colorText"
-                android:text="@string/createTrip"
+                android:text="@string/cancel"
                 android:textSize="16sp"
                 android:padding="10dp"
                 android:elevation="10dp"
+                android:layout_gravity="left"
+                />
+
+            <Button
+                android:id="@+id/riderProfileUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_design"
+                android:textColor="@color/colorText"
+                android:text="@string/save"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:elevation="10dp"
+                android:layout_gravity="right"
                 />
         </TableRow>
     </TableLayout>

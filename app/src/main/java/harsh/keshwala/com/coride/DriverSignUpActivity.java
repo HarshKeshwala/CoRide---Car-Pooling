@@ -1,6 +1,5 @@
 package harsh.keshwala.com.coride;
 
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -28,6 +27,7 @@ import java.net.URLEncoder;
 import java.util.Iterator;
 
 public class DriverSignUpActivity extends AppCompatActivity {
+
 
     private EditText dFirstName;
     private EditText dLastName;

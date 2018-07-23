@@ -26,7 +26,6 @@ import java.net.URLEncoder;
 import java.util.Iterator;
 
 public class RiderSignUpActivity extends AppCompatActivity {
-
     private EditText rFirstName;
     private EditText rLastName;
     private EditText rEmail;

@@ -1,17 +1,15 @@
 package harsh.keshwala.com.coride;
 
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -27,55 +25,55 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Iterator;
 
-public class DriverLoginActivity extends AppCompatActivity {
+public class DriverAddCarActivity extends AppCompatActivity {
 
-    private TextView driverSignUp;
-    private EditText driverEmailEditText;
-    private EditText driverPasswordEditText;
-    private Button driverLoginButton;
+    private EditText carModel, carNumber, carModelYear;
+    private Button addCar;
+    private SharedPreferences sharedPreferences;
+    private String dId;
     private ProgressDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_driver_login);
+        setContentView(R.layout.activity_driver_add_car);
 
-        driverSignUp = (TextView) findViewById(R.id.driverSignUpText);
-        driverSignUp.setOnClickListener(new View.OnClickListener() {
+        carModel = (EditText) findViewById(R.id.carModelName);
+        carNumber = (EditText) findViewById(R.id.carVehicleNumber);
+        carModelYear = (EditText) findViewById(R.id.carModelYear);
+
+        sharedPreferences = getSharedPreferences(Config.PREF_NAME,MODE_PRIVATE);
+        dId = sharedPreferences.getString("dId","");
+
+        addCar = (Button) findViewById(R.id.addCarButton);
+
+        addCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DriverLoginActivity.this, DriverSignUpActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        driverEmailEditText = (EditText) findViewById(R.id.driverEmailIdLogin);
-        driverPasswordEditText = (EditText) findViewById(R.id.driverPasswordLogin);
-        driverLoginButton = (Button) findViewById(R.id.driverLoginButton);
-        driverLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email = driverEmailEditText.getText().toString();
-                String password = driverPasswordEditText.getText().toString();
-
-                new LoginPost(email,password).execute();
+                new AddCar(dId,
+                        carModel.getText().toString(),
+                        carModelYear.getText().toString(),
+                        carNumber.getText().toString()).execute();
             }
         });
     }
 
     //login with Credentials
-    public class LoginPost extends AsyncTask<String, Void, String> {
+    public class AddCar extends AsyncTask<String, Void, String> {
 
-        String email, password;
-        public LoginPost(String email, String password) {
-            this.email = email;
-            this.password = password;
+
+        String dId, carModel, carModelYear, carNumber;
+        public AddCar(String dId, String carModel, String carModelYear, String carNumber)   {
+            this.dId = dId;
+            this.carModel = carModel;
+            this.carModelYear = carModelYear;
+            this.carNumber = carNumber;
         }
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(DriverLoginActivity.this);
+            pDialog = new ProgressDialog(DriverAddCarActivity.this);
             pDialog.setMessage("Please wait...");
             pDialog.setCancelable(false);
             pDialog.show();
@@ -85,11 +83,11 @@ public class DriverLoginActivity extends AppCompatActivity {
 
             try {
 
-                URL url = new URL(Config.URL+"UserClass.php?driverLogin=true&dEmail="+email+"&dPassword="+password);
+                String data = "dId="+dId + "&carModel=" + carModel + "&modelYear="+ carModelYear + "&vehicleNumber=" + carNumber;
+
+                URL url = new URL(Config.URL+"UserClass.php?driverAddCar=true&"+data);
                 Log.d("YYYYYYY",url.toString());
                 JSONObject postDataParams = new JSONObject();
-                postDataParams.put("dEmail", email);
-                postDataParams.put("dPassword", password);
                 Log.e("params",postDataParams.toString());
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -145,47 +143,13 @@ public class DriverLoginActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             Log.d("TAG-------",result);
             String status = null;
+            String message = null;
 
-            String id = null;
-            String firstName = null;
-            String lastName = null;
-            String email = null;
-            String password = null;
-            String phone = null;
-            String dob = null;
-            String licenseNumber = null;
-            String ratings = null;
 
             try {
                 JSONObject jsonObject = new JSONObject(result);
                 status = jsonObject.getString("status");
-                //JSONObject profile = jsonObject.
-
-                JSONObject profile = jsonObject.getJSONObject("user");
-                Log.d("LOGIN_RESULT",profile.toString());
-
-                id = profile.getString("dId");
-                firstName = profile.getString("dFirstName");
-                lastName = profile.getString("dLastName");
-                email = profile.getString("dEmail");
-                password = profile.getString("dPassword");
-                phone = profile.getString("dPhone");
-                dob = profile.getString("dDob");
-                licenseNumber = profile.getString("dLicenseNumber");
-                ratings = profile.getString("dRatings");
-
-                SharedPreferences.Editor editor = getSharedPreferences(Config.PREF_NAME, MODE_PRIVATE).edit();
-                editor.putString("dId",id);
-                editor.putString("dFirstName",firstName);
-                editor.putString("dLastName",lastName);
-                editor.putString("dEmail",email);
-                editor.putString("dPassword",password);
-                editor.putString("dPhone",phone);
-                editor.putString("dDob",dob);
-                editor.putString("dLicenseNumber",licenseNumber);
-                editor.putString("dRatings",ratings);
-                editor.apply();
-
+                message = jsonObject.getString("message");
 
             }
             catch (JSONException e) {
@@ -194,11 +158,11 @@ public class DriverLoginActivity extends AppCompatActivity {
             pDialog.dismiss();
 
             if(status.equals("Ok") == true) {
-                Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
                 startActivity(new Intent(getApplicationContext(),DriverHomeActivity.class));
             }
             else    {
-                Toast.makeText(getApplicationContext(),"Incorrect username or password",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
             }
 
 

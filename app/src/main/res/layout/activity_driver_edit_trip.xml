@@ -9,7 +9,7 @@
     android:background="@color/colorPrimary"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".DriverCreateTrip">
+    tools:context=".DriverEditTripActivity">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripSource"
+                android:id="@+id/teSource"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -83,7 +83,7 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripDestination"
+                android:id="@+id/teDestination"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -123,7 +123,7 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripDate"
+                android:id="@+id/teDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -163,7 +163,7 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripTime"
+                android:id="@+id/teTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
@@ -204,7 +204,7 @@
             android:gravity="center_horizontal"
             >
             <EditText
-                android:id="@+id/tripExpense"
+                android:id="@+id/teExpense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
@@ -219,40 +219,6 @@
                 android:nextFocusLeft="@id/tripExpense"
                 />
         </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="10"
-            android:gravity="left"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorText"
-                android:text="@string/vehicle"
-                android:gravity="left"
-                android:paddingLeft="14dp"
-                android:textSize="16dp"
-                />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:weightSum="10"
-            android:gravity="center_horizontal"
-            >
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="10"
-                android:id="@+id/vehicleId"
-                android:background="@drawable/edit_text_design"
-                >
-            </Spinner>
-        </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -261,12 +227,12 @@
             android:gravity="center_horizontal"
             >
             <Button
-                android:id="@+id/tripCreateButton"
+                android:id="@+id/tripEditButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_design"
                 android:textColor="@color/colorText"
-                android:text="@string/createTrip"
+                android:text="@string/save"
                 android:textSize="16sp"
                 android:padding="10dp"
                 android:elevation="10dp"
