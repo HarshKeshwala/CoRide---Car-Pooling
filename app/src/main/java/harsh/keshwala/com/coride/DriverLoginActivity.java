@@ -1,6 +1,5 @@
 package harsh.keshwala.com.coride;
 
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;

@@ -77,5 +77,22 @@
         </TableRow>
 
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:weightSum="10"
+            android:gravity="center_vertical|center_horizontal"
+            >
+            <TextView
+                android:id="@+id/adminLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/admin"
+                android:textSize="12sp"
+                android:textColor="@color/colorText"
+                />
+        </TableRow>
     </TableLayout>
 </LinearLayout>

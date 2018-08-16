@@ -376,6 +376,48 @@
                 android:drawablePadding="5dp"
                 />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:divider="@color/colorDivider"
+            android:showDividers="end"
+            android:background="@drawable/divider_table"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryText"
+                android:text="@string/rating"
+                android:gravity="center_vertical|end"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tdDriverRating"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryText"
+                android:text="@string/star"
+                android:gravity="center_vertical|start"
+                android:layout_weight="9"
+                android:paddingBottom="5dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:drawableStart="@drawable/star_black"
+                android:drawablePadding="5dp"
+                />
+        </TableRow>
+
         <!--Car Details-->
         <TableRow
             android:layout_width="match_parent"
@@ -654,6 +696,47 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:drawableStart="@drawable/phone"
+                android:drawablePadding="5dp"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:divider="@color/colorDivider"
+            android:showDividers="end"
+            android:background="@drawable/divider_table"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryText"
+                android:text="@string/rating"
+                android:gravity="center_vertical|end"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tdRiderRating"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryText"
+                android:text="@string/star"
+                android:gravity="center_vertical|start"
+                android:layout_weight="9"
+                android:paddingBottom="5dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:drawableStart="@drawable/star_black"
                 android:drawablePadding="5dp"
                 />
         </TableRow>

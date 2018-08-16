@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/startTrip"
+        android:title="@string/start"
+        app:showAsAction="always"
+        android:orderInCategory="1" />
+
+    <item android:id="@+id/completeTrip"
+        android:title="@string/complete"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:visible="false"
+        />
+
+    <item android:id="@+id/completedTrip"
+        android:title="@string/completed"
+        app:showAsAction="always"
+        android:visible="false"
+        android:orderInCategory="3" />
+
+</menu>

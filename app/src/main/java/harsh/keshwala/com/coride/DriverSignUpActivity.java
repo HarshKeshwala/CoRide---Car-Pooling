@@ -28,7 +28,6 @@ import java.util.Iterator;
 
 public class DriverSignUpActivity extends AppCompatActivity {
 
-
     private EditText dFirstName;
     private EditText dLastName;
     private EditText dEmail;

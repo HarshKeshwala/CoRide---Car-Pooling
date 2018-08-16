@@ -16,6 +16,27 @@
         android:layout_gravity="center_vertical|center_horizontal"
         android:padding="10dp">
 
+        <!--Ratings View-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:gravity="left"
+            >
+            <TextView
+                android:id="@+id/riderRatingsProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:text="@string/rating"
+                android:gravity="left"
+                android:drawablePadding="5dp"
+                android:textSize="16dp"
+                android:drawableLeft="@drawable/star"
+
+                />
+        </TableRow>
+
         <!--First Name-->
         <TableRow
             android:layout_width="match_parent"

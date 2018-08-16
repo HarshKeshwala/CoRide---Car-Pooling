@@ -1,5 +1,7 @@
 package harsh.keshwala.com.coride;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -13,6 +15,7 @@ import android.view.MenuItem;
 
 public class DriverHomeActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +27,7 @@ public class DriverHomeActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Past Trips").setIcon(R.drawable.trip));
         tabLayout.addTab(tabLayout.newTab().setText("Requests").setIcon(R.drawable.requests));
         tabLayout.addTab(tabLayout.newTab().setText("Vehicles").setIcon(R.drawable.cars));
+        tabLayout.addTab(tabLayout.newTab().setText("Support").setIcon(R.drawable.message));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -73,5 +77,6 @@ public class DriverHomeActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 }

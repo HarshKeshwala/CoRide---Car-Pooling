@@ -53,7 +53,32 @@
     <string name="addCar">Add Car</string>
     <string name="editTrip">Edit Trip</string>
     <string name="riderProfile">Rider Profile</string>
-
+    <string name="browseRides">Browse Rides</string>
+    <string name="sendRequest">Send Request</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="admin">Admin Login</string>
+    <string name="supportTitle">Title</string>
+    <string name="supportMessage">Message</string>
+    <string name="send">Send</string>
+    <string name="issueDetails">Issue Details</string>
+    <string name="response">Response</string>
+    <string name="senderName">Sender</string>
+    <string name="waiting">Waiting</string>
+    <string name="start">Start</string>
+    <string name="complete">Complete</string>
+    <string name="completed">Completed</string>
+    <string name="rating">Rating</string>
+    <string name="star">Star</string>
+    <string name="adminLogin">Admin Login</string>
+    <string name="delete">Remove</string>
+    <string-array name="ratings">
+        <item name="one">1</item>
+        <item name="two">2</item>
+        <item name="three">3</item>
+        <item name="four">4</item>
+        <item name="five">5</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

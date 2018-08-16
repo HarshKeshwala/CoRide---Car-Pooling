@@ -42,6 +42,7 @@ import java.util.Iterator;
 
 
 public class DriverHomeFragment extends android.support.v4.app.Fragment {
+
     String TAG = "UpcomingTrip";
     private ProgressDialog pDialog;
     private ListView lv;
@@ -62,6 +63,7 @@ public class DriverHomeFragment extends android.support.v4.app.Fragment {
         context = getActivity();
         View view =  inflater.inflate(R.layout.fragment_driver_home,container,false);
         return  view;
+
     }
 
     @Override

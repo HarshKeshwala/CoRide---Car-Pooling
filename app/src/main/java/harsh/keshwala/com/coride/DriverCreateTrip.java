@@ -1,6 +1,5 @@
 package harsh.keshwala.com.coride;
 
-
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;

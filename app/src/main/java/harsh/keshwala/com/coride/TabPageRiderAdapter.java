@@ -1,9 +1,11 @@
 package harsh.keshwala.com.coride;
 
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class TabPageRiderAdapter {
+public class TabPageRiderAdapter extends FragmentStatePagerAdapter {
 
     int tabCount;
 
@@ -19,11 +21,11 @@ public class TabPageRiderAdapter {
                 RiderHomeFragment riderHomeFragment = new RiderHomeFragment();
                 return riderHomeFragment;
             case 1:
-                RiderBrowseTripFragment riderBrowseTripFragment = new RiderBrowseTripFragment();
-                return riderBrowseTripFragment;
-            case 2:
                 RiderPastTripFragment riderPastTripFragment = new RiderPastTripFragment();
                 return riderPastTripFragment;
+            case 2:
+                RiderSupportFragment riderSupportFragment = new RiderSupportFragment();
+                return  riderSupportFragment;
             default:
                 return null;
         }

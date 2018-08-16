@@ -41,7 +41,6 @@ import java.util.Iterator;
 
 public class DriverPastTripsFragment extends android.support.v4.app.Fragment {
 
-
     String TAG = "PastTrip";
     private ProgressDialog pDialog;
     private ListView lv;
@@ -341,5 +340,4 @@ public class DriverPastTripsFragment extends android.support.v4.app.Fragment {
         }
         return result.toString();
     }
-
 }

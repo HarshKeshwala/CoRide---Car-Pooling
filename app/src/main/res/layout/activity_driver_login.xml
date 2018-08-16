@@ -51,7 +51,6 @@
                 android:padding="10dp"
                 android:layout_weight="10"
                 android:hint="@string/driverEmail"
-                android:text="james@gmail.com"
                 android:maxLength="50"
                 />
 
@@ -77,7 +76,6 @@
                 android:padding="10dp"
                 android:layout_weight="10"
                 android:hint="@string/password"
-                android:text="yash007"
                 android:maxLength="50"
                 />
 

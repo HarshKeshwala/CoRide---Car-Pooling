@@ -8,5 +8,6 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
+    <color name="colorDetails">#eee</color>
     <color name="colorText">#ffffff</color>
 </resources>

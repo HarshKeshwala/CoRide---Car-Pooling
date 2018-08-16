@@ -4,12 +4,13 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -30,6 +31,7 @@ public class DriverAccountProfileActivity extends AppCompatActivity {
     private EditText firstName, lastName, email, phone, dob, licenseNumber;
     private SharedPreferences sharedPreferences;
     private Button cancel, save;
+    private TextView ratings;
 
     private ProgressDialog pDialog;
     private String dId;
@@ -45,6 +47,7 @@ public class DriverAccountProfileActivity extends AppCompatActivity {
         phone = (EditText) findViewById(R.id.driverPhoneProfile);
         dob = (EditText) findViewById(R.id.driverDobProfile);
         licenseNumber = (EditText) findViewById(R.id.driverLicenseProfile);
+        ratings = (TextView) findViewById(R.id.ratingsView);
 
         sharedPreferences = getSharedPreferences(Config.PREF_NAME, MODE_PRIVATE);
 
@@ -54,6 +57,7 @@ public class DriverAccountProfileActivity extends AppCompatActivity {
         phone.setText(sharedPreferences.getString("dPhone",""));
         dob.setText(sharedPreferences.getString("dDob",""));
         licenseNumber.setText(sharedPreferences.getString("dLicenseNumber",""));
+        ratings.setText(sharedPreferences.getString("dRatings","") + " Stars");
 
         dId = sharedPreferences.getString("dId","");
 

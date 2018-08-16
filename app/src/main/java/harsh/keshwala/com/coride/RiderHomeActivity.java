@@ -1,28 +1,26 @@
 package harsh.keshwala.com.coride;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 public class RiderHomeActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rider_home);
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs1);
 
         tabLayout.addTab(tabLayout.newTab().setText("Home").setIcon(R.drawable.home));
-        tabLayout.addTab(tabLayout.newTab().setText("Browse").setIcon(R.drawable.browse));
         tabLayout.addTab(tabLayout.newTab().setText("Past Trips").setIcon(R.drawable.trip));
+        tabLayout.addTab(tabLayout.newTab().setText("Support").setIcon(R.drawable.message));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager1);

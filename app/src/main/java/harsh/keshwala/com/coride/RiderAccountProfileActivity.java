@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -30,6 +31,7 @@ public class RiderAccountProfileActivity extends AppCompatActivity {
     private EditText firstName, lastName, email, phone, dob;
     private SharedPreferences sharedPreferences;
     private Button cancel, save;
+    private TextView ratings;
 
     private ProgressDialog pDialog;
     private String rId;
@@ -44,6 +46,7 @@ public class RiderAccountProfileActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.riderEmailProfile);
         phone = (EditText) findViewById(R.id.riderPhoneProfile);
         dob = (EditText) findViewById(R.id.riderDobProfile);
+        ratings = (TextView) findViewById(R.id.riderRatingsProfile);
 
         sharedPreferences = getSharedPreferences(Config.PREF_NAME, MODE_PRIVATE);
 
@@ -52,6 +55,7 @@ public class RiderAccountProfileActivity extends AppCompatActivity {
         email.setText(sharedPreferences.getString("rEmail", ""));
         phone.setText(sharedPreferences.getString("rPhone", ""));
         dob.setText(sharedPreferences.getString("rDob", ""));
+        ratings.setText(sharedPreferences.getString("rRatings","") + " Stars");
 
         rId = sharedPreferences.getString("rId", "");
 
